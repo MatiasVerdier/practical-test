@@ -1,0 +1,51 @@
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@import 'colors';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  .backgroundImage {
+    background-image: url(https://placeholdit.imgix.net/~text?txtsize=50&txt=900%C3%97600&w=900&h=600);
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+  }
+}
+
+.content-block {
+  height: 50vh;
+}
+
+
+.navigation {
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+
+  .item {
+    color: $letter;
+    padding: 10px 15px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $secDark;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .navigation {
+    flex-direction: row;
+  }
+}
