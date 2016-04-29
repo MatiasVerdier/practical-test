@@ -4,6 +4,7 @@ import TextBlock from '../components/TextBlock'
 import TwitterBlock from '../components/TwitterBlock'
 import CarrouselBlock from '../components/CarrouselBlock'
 import ShareBlock from '../components/ShareBlock'
+import Footer from '../components/Footer'
 
 class App extends Component {
   render () {
@@ -14,6 +15,7 @@ class App extends Component {
         <TwitterBlock />
         <CarrouselBlock />
         <ShareBlock />
+        <Footer />
       </div>
     )
   }
