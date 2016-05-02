@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  .backgroundImage {
+    background-image: url(https://placeholdit.imgix.net/~text?txtsize=50&txt=900%C3%97600&w=900&h=600);
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+  }
+}

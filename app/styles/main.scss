@@ -1,101 +1,14 @@
-@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
 
-@import 'colors';
-@import 'variables';
+@import './utils/variables';
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-}
+@import './base/reset';
+@import './base/base';
 
-.header {
-  display: flex;
-  flex-direction: column;
-  height: 400px;
+@import './layout/navigation';
 
-  .backgroundImage {
-    background-image: url(https://placeholdit.imgix.net/~text?txtsize=50&txt=900%C3%97600&w=900&h=600);
-    background-position: center;
-    background-size: cover;
-    flex: 1;
-  }
-}
+@import './components/header';
+@import './components/carrousel';
+@import './components/footer';
 
-.content-block {
-  color: $letter;
-  min-height: 50vh;
-  padding: $menu-height 20px;
-  
-  .title {
-    font-size: 2em;
-    text-align: center;
-    margin: 0.5em 0;
-  }
-
-  &#text {
-    background-color: $primDark;
-  }
-
-  &#twitter {
-    background-color: $secDark;
-  }
-
-  &#carrousel {
-    background-color: $primDark;
-  }
-
-  &#share {
-    background-color: $secDark;
-  }
-}
-
-.nav-wrapper {
-  position: fixed;
-  width: 100%;
-  background-color: $primary;
-
-  #menu {
-    color: $letter;
-    display: none;
-    padding: $menu-items-v-padding 15px;
-  }
-}
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-
-  .item {
-    color: $letter;
-    padding: $menu-items-v-padding 15px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: $secDark;
-    }
-  }
-}
-
-.footer {
-  background-color: $primary;
-  color: $letter;
-  padding: 20px 10px;
-  line-height: 1.3em;
-  text-align: center;
-}
-
-@media screen and (max-width: 480px) {
-  .navigation {
-    display: none;
-    flex-direction: column;
-  }
-
-  .nav-wrapper {
-    #menu {
-      display: block;
-    }
-  }
-}

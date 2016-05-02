@@ -1,0 +1,40 @@
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  background-color: $primary;
+
+  #menu {
+    color: $letter;
+    display: none;
+    padding: $menu-items-v-padding 15px;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  .item {
+    color: $letter;
+    padding: $menu-items-v-padding 15px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $secDark;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-wrapper {
+    #menu {
+      display: block;
+    }
+  }
+}
