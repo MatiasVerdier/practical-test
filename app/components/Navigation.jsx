@@ -3,13 +3,13 @@ import React, { Component } from 'react'
 class Navigation extends Component {
   constructor (props) {
     super(props)
-    this.toggleMenu.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   render () {
     return (
       <div className='nav-wrapper'>
-        <nav className='navigation'>
+        <nav ref='nav' className='navigation'>
           <a href='#text' className='item'>Text</a>
           <a href='#twitter' className='item'>Twitter</a>
           <a href='#carrousel' className='item'>Carrousel</a>
@@ -23,8 +23,10 @@ class Navigation extends Component {
     )
   }
 
-  toggleMenu () {
-    // handle menu click
+  toggleMenu (event) {
+    event.preventDefault()
+    let nav = this.refs.nav
+    nav.className = nav.className === 'navigation' ? 'navigation open' : 'navigation'
   }
 }
 
