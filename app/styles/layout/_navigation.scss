@@ -1,4 +1,5 @@
 .nav-wrapper {
+  min-height: $menu-height;
   position: fixed;
   width: 100%;
   background-color: $primary;
@@ -11,14 +12,17 @@
 }
 
 .navigation {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  min-height: $menu-height;
   justify-content: flex-end;
 
   .item {
     color: $letter;
     padding: $menu-items-v-padding 15px;
     text-decoration: none;
+    vertical-align: center;
 
     &:hover {
       background-color: $secDark;
@@ -30,6 +34,7 @@
   .navigation {
     display: none;
     flex-direction: column;
+    align-items: stretch;
 
     &.open {
       display: flex;
