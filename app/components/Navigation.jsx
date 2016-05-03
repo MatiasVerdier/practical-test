@@ -18,7 +18,7 @@ class Navigation extends Component {
         </nav>
 
         <a id='menu' href='#' onClick={this.toggleMenu}>
-          <i className='fa fa-bars'></i>
+          <i ref='menuIcon' className='fa fa-bars'></i>
         </a>
       </div>
     )
@@ -27,11 +27,14 @@ class Navigation extends Component {
   toggleMenu (event) {
     event.preventDefault()
     let nav = this.refs.nav
+    let icon = this.refs.menuIcon
     nav.className = nav.className === 'navigation' ? 'navigation open' : 'navigation'
+    icon.className = icon.className === 'fa fa-bars' ? 'fa fa-close' : 'fa fa-bars'
   }
 
   handleLinkClick () {
     this.refs.nav.className = 'navigation'
+    this.refs.menuIcon.className = 'fa fa-bars'
   }
 }
 
