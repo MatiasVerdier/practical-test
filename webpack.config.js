@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const autoprefixer = require('autoprefixer')
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -26,10 +27,13 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel-loader']
       },
-      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+      { test: /\.scss$/, loader: 'style-loader!css-loader!postcss-loader!sass-loader' },
       { test: /\.png$/, loader: 'url-loader?limit=85000' },
       { test: /\.jpg$/, loader: 'file-loader' }
     ]
+  },
+  postcss: function () {
+    return [autoprefixer]
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
