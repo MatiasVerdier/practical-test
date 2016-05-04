@@ -1,0 +1,18 @@
+#twitter {
+  .tweets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .tweet-box {
+    max-width: 250px;
+    // min-height: 80px;
+    padding: 1%;
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+}
