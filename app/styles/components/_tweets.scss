@@ -6,13 +6,22 @@
   }
 
   .tweet-box {
+    margin-bottom: 3%;
     max-width: 250px;
-    // min-height: 80px;
     padding: 1%;
 
     img {
       border-radius: 10px;
+      margin-bottom: 5px;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #twitter {
+    .tweet-box {
+      max-width: 15%;
     }
   }
 }
