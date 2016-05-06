@@ -1,0 +1,19 @@
+#share {
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .share-image {
+    max-width: 500px;
+
+    img {
+      width: 100%;
+      border-radius: 2%;
+
+      &:hover {
+        filter: grayscale(50%);
+      }
+    }
+  }
+}

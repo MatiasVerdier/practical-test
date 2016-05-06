@@ -1,0 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size;
+}
+
+p {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.content-block {
+  color: $letter;
+  min-height: 50vh;
+  padding: $menu-height 20px;
+  
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 0.5em 0;
+  }
+
+  &#text {
+    background-color: $primDark;
+  }
+
+  &#twitter {
+    background-color: $secDark;
+  }
+
+  &#carrousel {
+    background-color: $primDark;
+  }
+
+  &#share {
+    background-color: $secDark;
+  }
+}
